@@ -1,30 +1,38 @@
 calc_to_units = 24
 name_of_unit = "hours"
 
-print(f"30 days are {30 * calc_to_units} {name_of_unit}")
-print(f"35 days are {35 * calc_to_units} {name_of_unit}")
-print(f"80 days are {80 * calc_to_units} {name_of_unit}")
-print(f"120 days are {120 * calc_to_units} {name_of_unit}")
+# print(f"30 days are {30 * calc_to_units} {name_of_unit}")
+# print(f"35 days are {35 * calc_to_units} {name_of_unit}")
+# print(f"80 days are {80 * calc_to_units} {name_of_unit}")
+# print(f"120 days are {120 * calc_to_units} {name_of_unit}")
 
 
-def days_to_units(num_of_days, custom_message):
-    print(f"{num_of_days} days are {num_of_days * calc_to_units} {name_of_unit}")
-    print(custom_message)
-    print("----------------------")
+def days_to_units(num_of_days):
+    return (f"{num_of_days} days are {num_of_days * calc_to_units} {name_of_unit}")
 
 
-days_to_units(30, "that's awesome")
+# my_var = days_to_units(10)
 
-days_to_units(50, "no way")
+# print(my_var)
 
-days_to_units(80, "kowabunga")
+# days_to_units(30, "that's awesome")
 
+# days_to_units(50, "no way")
 
-def scope_check(parameter_internal_var):
-    my_var = "my variable"
-    print(name_of_unit)  # global variable
-    print(parameter_internal_var)  # local variable as parameter
-    print(my_var)  # local variable created inside function
+# days_to_units(80, "kowabunga")
 
 
-scope_check("hello")
+# def scope_check(parameter_internal_var):
+#     my_var = "my variable"
+#     print(name_of_unit)  # global variable
+#     print(parameter_internal_var)  # local variable as parameter
+#     print(my_var)  # local variable created inside function
+
+
+# scope_check("hello")
+
+
+user_input = input(
+    "Hey user, enter a number of days and I will convert it to hours!\n")
+
+print(days_to_units(int(user_input)))
