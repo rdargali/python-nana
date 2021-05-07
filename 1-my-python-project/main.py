@@ -12,12 +12,18 @@ def days_to_units(num_of_days):
         return ("incorrect value, please enter value that is greater than zero")
 
 
+def validate_input():
+    if user_input.isdigit():
+        print(days_to_units(int(user_input)))
+    else:
+        print(f"{user_input} is not a valid input, please enter a positive integer")
+
+
 user_input = input(
     "Hey user, enter a number of days and I will convert it to hours!\n"
 )
 
-print(days_to_units(int(user_input)))
-
+validate_input()
 
 # ---SCOPE---
 # def scope_check(parameter_internal_var):
