@@ -8,31 +8,35 @@ name_of_unit = "hours"
 
 
 def days_to_units(num_of_days):
-    return (f"{num_of_days} days are {num_of_days * calc_to_units} {name_of_unit}")
+    print(num_of_days > 0)
+    if num_of_days > 0:
+        return (f"{num_of_days} days are {num_of_days * calc_to_units} {name_of_unit}")
+    elif num_of_days == 0:
+        return (f"{num_of_days} days are {num_of_days * calc_to_units} {name_of_unit}, but you probably already knew that! Please enter a valid positive number")
+    else:
+        return ("incorrect value, please enter value that is greater than zero")
 
+        # my_var = days_to_units(10)
 
-# my_var = days_to_units(10)
+        # print(my_var)
 
-# print(my_var)
+        # days_to_units(30, "that's awesome")
 
-# days_to_units(30, "that's awesome")
+        # days_to_units(50, "no way")
 
-# days_to_units(50, "no way")
+        # days_to_units(80, "kowabunga")
 
-# days_to_units(80, "kowabunga")
+        # def scope_check(parameter_internal_var):
+        #     my_var = "my variable"
+        #     print(name_of_unit)  # global variable
+        #     print(parameter_internal_var)  # local variable as parameter
+        #     print(my_var)  # local variable created inside function
 
-
-# def scope_check(parameter_internal_var):
-#     my_var = "my variable"
-#     print(name_of_unit)  # global variable
-#     print(parameter_internal_var)  # local variable as parameter
-#     print(my_var)  # local variable created inside function
-
-
-# scope_check("hello")
+        # scope_check("hello")
 
 
 user_input = input(
-    "Hey user, enter a number of days and I will convert it to hours!\n")
+    "Hey user, enter a number of days and I will convert it to hours!\n"
+)
 
 print(days_to_units(int(user_input)))
