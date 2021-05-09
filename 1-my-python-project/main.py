@@ -15,12 +15,14 @@ def days_to_units(num_of_days):
 def validate_input():
     if user_input.isdigit():
         print(days_to_units(int(user_input)))
+    elif user_input == "exit":
+        print("You have exited the program")
     else:
         print(f"{user_input} is not a valid input, please enter a positive integer")
 
 
-while True:
-
+user_input = ""
+while user_input != "exit":
     user_input = input(
         "Hey user, enter a number of days and I will convert it to hours!\n"
     )
