@@ -19,11 +19,12 @@ def validate_input():
         print(f"{user_input} is not a valid input, please enter a positive integer")
 
 
-user_input = input(
-    "Hey user, enter a number of days and I will convert it to hours!\n"
-)
+while True:
 
-validate_input()
+    user_input = input(
+        "Hey user, enter a number of days and I will convert it to hours!\n"
+    )
+    validate_input()
 
 # ---SCOPE---
 # def scope_check(parameter_internal_var):
