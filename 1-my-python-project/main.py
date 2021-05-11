@@ -21,7 +21,7 @@ def validate_input():
         print(f"{user_input} is not a valid input, please enter a positive integer")
 
 
-user_input = ""
+user_input = " "
 while user_input != "exit":
     user_input = input(
         "Hey user, enter a number of days and I will convert it to hours!\n"
