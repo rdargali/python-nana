@@ -14,7 +14,7 @@ def days_to_units(num_of_days):
 
 def validate_input():
     try:
-        user_input_number = int(user_input)
+        user_input_number = int(num_of_days)
         if user_input_number > 0:
             calculated_value = days_to_units(user_input_number)
             print(calculated_value)
@@ -30,15 +30,7 @@ def validate_input():
 user_input = ""
 while user_input != "exit":
     user_input = input(
-        "Hey user, enter a number of days and I will convert it to hours!\n"
+        "Hey user, enter a number of days as a comma seperated list and I will convert it to hours!\n"
     )
-    validate_input()
-
-# ---SCOPE---
-# def scope_check(parameter_internal_var):
-#     my_var = "my variable"
-#     print(name_of_unit)  # global variable
-#     print(parameter_internal_var)  # local variable as parameter
-#     print(my_var)  # local variable created inside function
-
-# scope_check("hello")
+    for num_of_days in user_input.split(","):
+        validate_input()
